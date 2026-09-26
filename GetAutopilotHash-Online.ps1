@@ -54,7 +54,7 @@ Install-PackageProvider -Name NuGet -Force | Out-Null
 Install-Script -Name Get-WindowsAutopilotInfo -Force
 
 # Generate the device Autopilot hardware hash and save it to a temporary CSV file.
-Get-WindowsAutopilotInfo -OutputFile $TempPath
+Get-WindowsAutopilotInfo -OutputFile $TempPath -grouptag TIV
 
 # If HWID.csv does not already exist on the USB drive,
 # move the temporary CSV file there as the main output file.
